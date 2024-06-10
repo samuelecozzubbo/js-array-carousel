@@ -23,6 +23,11 @@ img{
 
 .item{
     position: relative;
+    display: none;
+}
+
+.active{
+    display: inline-block;
 }
 
 .arrowhead{

@@ -23,8 +23,34 @@ for (let i = 0; i < imgArray.length; i++) {
 
 //seleziono tutti gli elementi item in pagina
 const items = document.getElementsByClassName("item");
+console.log(items);
+
+let activeItem = 0;
 
 //mettiamo la calsse active al primo elemento per farlo vedere
 items[0].classList.add("active");
+
+//EVENTO CLICK DOWN
+
+//seleziono il bottone next
+const down = document.querySelector(".down");
+
+//gestiamo il click su next
+down.addEventListener("click",
+    function() {
+        console.log("Mi hai cliccato");
+        
+        //verifichiamo se non siamo alla fine della lista delle immagini
+        if(activeItem < imgArray.length - 1) {
+            //togliamo la classe active agli item n attivi "precedente"
+            items[activeItem].classList.remove("active");
+
+            activeItem = activeItem + 1;
+            //mettiamo la calsse active++
+            items[activeItem].classList.add("active");
+        }
+    }
+)
+
 
 

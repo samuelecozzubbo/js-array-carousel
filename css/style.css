@@ -51,3 +51,8 @@ img{
     left: 50%;
     transform: translate(-50%, -2%);
 }
+
+.arrowhead:hover{
+    opacity: 1;
+    cursor: pointer;
+}

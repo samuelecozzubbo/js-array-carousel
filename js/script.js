@@ -21,4 +21,10 @@ for (let i = 0; i < imgArray.length; i++) {
 
 }
 
+//seleziono tutti gli elementi item in pagina
+const items = document.getElementsByClassName("item");
+
+//mettiamo la calsse active al primo elemento per farlo vedere
+items[0].classList.add("active");
+
 

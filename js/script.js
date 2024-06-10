@@ -13,8 +13,6 @@ for (let i = 0; i < imgArray.length; i++) {
     //creare ad ogni iterazione l'elemento da inserire
     let itemContent = `<div class="item">
                             <img src="${itemImg}">
-                            <div class="arrowhead down">&#709;</div>
-                            <div class="arrowhead up">&#708;</div>
                         </div>`;
     //inseriamo il nuovo elemento nel contenitore
     itemsContainer.innerHTML += itemContent;
@@ -32,10 +30,10 @@ items[0].classList.add("active");
 
 //EVENTO CLICK DOWN
 
-//seleziono il bottone next
+//seleziono il bottone down
 const down = document.querySelector(".down");
 
-//gestiamo il click su next
+//gestiamo il click su down
 down.addEventListener("click",
     function() {
         console.log("Mi hai cliccato");
@@ -47,6 +45,25 @@ down.addEventListener("click",
 
             activeItem = activeItem + 1;
             //mettiamo la calsse active++
+            items[activeItem].classList.add("active");
+        }
+    }
+)
+
+//EVENTO CLICK UP
+
+//seleziono il bottone up
+const up = document.querySelector(".up");
+
+//gestiamo il click su up
+up.addEventListener("click",
+    function() {
+        console.log("Mi hai cliccato su");
+        
+        if(activeItem > 0) {
+            items[activeItem].classList.remove("active");
+
+            activeItem = activeItem - 1;
             items[activeItem].classList.add("active");
         }
     }

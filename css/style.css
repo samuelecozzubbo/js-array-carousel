@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container{
+    text-align: center;
+}
+
+img{
+    max-width: 20%;
+}
+
+.item{
+    position: relative;
+}
+
+.arrowhead{
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+.down{
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+}
+
+.up{
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+}
